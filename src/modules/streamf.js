@@ -2,10 +2,10 @@ const { validateRequiredParameters } = require('../helpers/validation')
 
 /**
  * API stream endpoints
- * @module Stream
+ * @module Streamf
  * @param {*} superclass
  */
-const Stream = superclass => class extends superclass {
+const Streamf = superclass => class extends superclass {
   /**
    * Create a ListenKey (USER_STREAM)<br>
    *
@@ -59,4 +59,4 @@ const Stream = superclass => class extends superclass {
   
 }
 
-module.exports = Stream
+module.exports = Streamf
