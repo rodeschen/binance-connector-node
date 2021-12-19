@@ -1,12 +1,14 @@
 const APIBase = require('./APIBase')
 const {
   Blvt, Bswap, SubAccount, Market, Trade, Futures, Fiat,
-  Wallet, Margin, Mining, Savings, Stream, Websocket, C2C, Loan, Pay, Convert, Rebate, NFT
+  Wallet, Margin, Mining, Savings, Stream, Websocket, C2C, Loan, Pay, Convert, Rebate, NFT,
+  Streamf, Websocketf,
 } = require('./modules')
 const { flowRight } = require('./helpers/utils')
 
 class Spot extends flowRight(Blvt, Bswap, SubAccount, Websocket, Stream,
-  Savings, Margin, Mining, Wallet, Market, Trade, Futures, Fiat, C2C, Loan, Pay, Convert, Rebate, NFT)(APIBase) {
+  Savings, Margin, Mining, Wallet, Market, Trade, Futures, Fiat, C2C, Loan, Pay, Convert, Rebate, NFT,
+  Streamf, Websocketf)(APIBase) {
   constructor (apiKey = '', apiSecret = '', options = {}) {
     options.baseURL = options.baseURL || 'https://api.binance.com'
     super({
