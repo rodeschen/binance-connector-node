@@ -254,14 +254,12 @@ const Marketf = superclass => class extends superclass {
 
   marketPrice (symbol) {
     validateRequiredParameters({ symbol })
-  
+
     return this.publicRequest(
       'GET',
       '/fapi/v1/premiumIndex', { symbol: symbol.toUpperCase() }
     )
   }
-
-
 }
 
 module.exports = Marketf

@@ -2,7 +2,7 @@ const APIBase = require('./APIBase')
 const {
   Blvt, Bswap, SubAccount, Market, Trade, Futures, Fiat,
   Wallet, Margin, Mining, Savings, Stream, Websocket, C2C, Loan, Pay, Convert, Rebate, NFT,
-  Tradef, Streamf, Websocketf,
+  Tradef, Streamf, Websocketf
 } = require('./modules')
 const { flowRight } = require('./helpers/utils')
 

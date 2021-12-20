@@ -55,8 +55,6 @@ const Streamf = superclass => class extends superclass {
       { listenKey }
     )
   }
-
-  
 }
 
 module.exports = Streamf

@@ -6,7 +6,6 @@ const { validateRequiredParameters } = require('../helpers/validation')
  * @param {*} superclass
  */
 const Tradef = superclass => class extends superclass {
-  
   /**
    * New Order (TRADE)<br>
    *
@@ -77,7 +76,6 @@ const Tradef = superclass => class extends superclass {
     )
   }
 
-
   getFutureAllOrders (symbol, options = {}) {
     validateRequiredParameters({ symbol })
     return this.signRequest(
@@ -93,12 +91,11 @@ const Tradef = superclass => class extends superclass {
     validateRequiredParameters({ symbol })
     return this.signRequest(
       'GET',
-      '/fapi/v2/positionRisk',{
+      '/fapi/v2/positionRisk', {
         symbol: symbol.toUpperCase()
       }
     )
   }
-
 }
 
 module.exports = Tradef
