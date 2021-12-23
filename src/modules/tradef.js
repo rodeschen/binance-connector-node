@@ -86,7 +86,7 @@ const Tradef = superclass => class extends superclass {
       })
     )
   }
-
+  
   accountPositionInfo (symbol) {
     validateRequiredParameters({ symbol })
     return this.signRequest(
@@ -94,6 +94,19 @@ const Tradef = superclass => class extends superclass {
       '/fapi/v2/positionRisk', {
         symbol: symbol.toUpperCase()
       }
+    )
+  }
+  modifyPositionMargin (symbol, amount, type, options = {}) {
+    validateRequiredParameters({ symbol, amount, type })
+
+    return this.signRequest(
+      'POST',
+      '/fapi/v2/positionRisk',
+      Object.assign(options, {
+        symbol: symbol.toUpperCase(),
+        amount,
+        type
+      })
     )
   }
 }
