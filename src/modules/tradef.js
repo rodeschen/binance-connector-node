@@ -101,7 +101,7 @@ const Tradef = superclass => class extends superclass {
 
     return this.signRequest(
       'POST',
-      '/fapi/v2/positionRisk',
+      '/fapi/v1/positionMargin',
       Object.assign(options, {
         symbol: symbol.toUpperCase(),
         amount,
