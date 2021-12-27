@@ -200,6 +200,13 @@ const Websocketf = superclass => class extends superclass {
     return this.subscribe(url, callbacks)
   }
 
+
+  futureMarkPriceWS (symbol, callbacks) {
+    validateRequiredParameters({ symbol })
+    const url = `${this.wsURL}/ws/${symbol.toLowerCase()}@arr`
+    return this.subscribe(url, callbacks)
+  }
+
   /**
    * Listen to market streams<br>
    *
